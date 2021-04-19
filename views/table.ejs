@@ -1,0 +1,89 @@
+<%- include('partials/header') %>
+
+  <% for(var i=0;i<length;i++){%>
+    <div class="container">
+
+
+    <h1>iteration<%- i+1%></h1>
+ <table class="table  table-bordered" border="4">
+  <thead>
+    <tr>
+      <th scope="col">Player 1</th>
+      <th scope="col">Player 2</th>
+      <th scope="col">Player 3</th>
+      <th scope="col">Player 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td><%-result[i].player1%></td>
+      <td><%-result[i].player2%></td>
+      <td><%-result[i].player3%></td>
+      <td><%-result[i].player4%></td>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-bordered" border="4" >
+  <thead>
+    <tr>
+      <th>
+        <h3>Totals</h3>
+      </th>
+      <th>
+
+      </th>
+      <th colspan="5">
+        <h3>Against</h3>
+      </th>
+    </tr>
+
+    <tr>
+      <th></th>
+      <th></th>
+      <th scope="col">Player 1</th>
+      <th scope="col">Player 2</th>
+      <th scope="col">Player 3</th>
+      <th scope="col">Player 4</th>
+    </tr>
+    </thead>
+
+
+
+    <tr>
+      <!-- <th scope="row">i+1</th> -->
+      <td rowspan="4"> Player Wins</td>
+      <td></td>
+      <td>-</td>
+      <td><%-result[i].player12%></td>
+      <td><%-result[i].player13%></td>
+      <td><%-result[i].player14%></td>
+    </tr>
+    <tr>
+      <td>Player2</td>
+
+      <td><%-result[i].player21%></td>
+      <td>-</td>
+      <td><%-result[i].player23%></td>
+      <td><%-result[i].player24%></td>
+    </tr>
+    <tr>
+      <td>Player3</td>
+
+      <td><%-result[i].player31%></td>
+      <td><%-result[i].player32%></td>
+      <td>-</td>
+      <td><%-result[i].player34%></td>
+    </tr>
+    <tr>
+      <td>Player4</td>
+      <td><%-result[i].player41%></td>
+      <td><%-result[i].player42%></td>
+      <td><%-result[i].player43%></td>
+      <td>-</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+<% } %>
